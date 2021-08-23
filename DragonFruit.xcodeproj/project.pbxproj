@@ -14,8 +14,8 @@
 		77551F6126D3163A00F49483 /* librust.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77551F5A26D3163A00F49483 /* librust.a */; };
 		77551F6226D3163A00F49483 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77551F5B26D3163A00F49483 /* ContentView.swift */; };
 		77551F6A26D3182B00F49483 /* StrategyMACD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77551F6726D3182B00F49483 /* StrategyMACD.swift */; };
-		77551F6B26D3182B00F49483 /* StrategyGoldenCross.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77551F6826D3182B00F49483 /* StrategyGoldenCross.swift */; };
 		77551F6C26D3182B00F49483 /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77551F6926D3182B00F49483 /* Root.swift */; };
+		77551F7026D3264B00F49483 /* MACDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77551F6F26D3264B00F49483 /* MACDView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +28,8 @@
 		77551F5B26D3163A00F49483 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		77551F5C26D3163A00F49483 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77551F6726D3182B00F49483 /* StrategyMACD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrategyMACD.swift; sourceTree = "<group>"; };
-		77551F6826D3182B00F49483 /* StrategyGoldenCross.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrategyGoldenCross.swift; sourceTree = "<group>"; };
 		77551F6926D3182B00F49483 /* Root.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
+		77551F6F26D3264B00F49483 /* MACDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACDView.swift; sourceTree = "<group>"; };
 		77756FE826CF8CB600D4B9E4 /* DragonFruit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonFruit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -90,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				77551F6926D3182B00F49483 /* Root.swift */,
-				77551F6826D3182B00F49483 /* StrategyGoldenCross.swift */,
 				77551F6726D3182B00F49483 /* StrategyMACD.swift */,
 			);
 			path = models;
@@ -100,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				77551F5B26D3163A00F49483 /* ContentView.swift */,
+				77551F6F26D3264B00F49483 /* MACDView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -219,11 +219,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77551F6B26D3182B00F49483 /* StrategyGoldenCross.swift in Sources */,
 				77551F5F26D3163A00F49483 /* Engine.swift in Sources */,
 				77551F6A26D3182B00F49483 /* StrategyMACD.swift in Sources */,
 				77551F6226D3163A00F49483 /* ContentView.swift in Sources */,
 				77551F5E26D3163A00F49483 /* DragonFruitApp.swift in Sources */,
+				77551F7026D3264B00F49483 /* MACDView.swift in Sources */,
 				77551F6C26D3182B00F49483 /* Root.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

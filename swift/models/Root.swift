@@ -14,7 +14,7 @@ enum Strategy: Int, CaseIterable, Codable {
 
 final class Root: Codable, ObservableObject {
     @Published var strategyMACD: StrategyMACD
-    @Published var strategyGoldenCross: StrategyGoldenCross
+    @Published var strategyGoldenCross: StrategyMACD
     @Published var strategy: Strategy
 
     enum CodingKeys: CodingKey {
@@ -24,8 +24,8 @@ final class Root: Codable, ObservableObject {
     }
 
     init() {
-        self.strategyMACD = StrategyMACD(fastPeriod: 0, slowPeriod: 0, signalPeriod: 0)
-        self.strategyGoldenCross = StrategyGoldenCross(fastPeriod: 0, slowPeriod: 0, signalPeriod: 0)
+        self.strategyMACD = StrategyMACD()
+        self.strategyGoldenCross = StrategyMACD()
         self.strategy = .macd
     }
 
@@ -41,7 +41,7 @@ final class Root: Codable, ObservableObject {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
         strategyMACD = try container.decode(StrategyMACD.self, forKey: .strategyMACD)
-        strategyGoldenCross = try container.decode(StrategyGoldenCross.self, forKey: .strategyGoldenCross)
+        strategyGoldenCross = try container.decode(StrategyMACD.self, forKey: .strategyGoldenCross)
         strategy = try container.decode(Strategy.self, forKey: .strategy)
     }
 }
