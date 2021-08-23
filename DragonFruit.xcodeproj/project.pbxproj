@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		77551F5D26D3163A00F49483 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77551F5426D3163A00F49483 /* Assets.xcassets */; };
 		77551F5E26D3163A00F49483 /* DragonFruitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77551F5526D3163A00F49483 /* DragonFruitApp.swift */; };
-		77551F5F26D3163A00F49483 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77551F5626D3163A00F49483 /* ViewModel.swift */; };
+		77551F5F26D3163A00F49483 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77551F5626D3163A00F49483 /* Engine.swift */; };
 		77551F6026D3163A00F49483 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77551F5826D3163A00F49483 /* Preview Assets.xcassets */; };
 		77551F6126D3163A00F49483 /* librust.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77551F5A26D3163A00F49483 /* librust.a */; };
 		77551F6226D3163A00F49483 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77551F5B26D3163A00F49483 /* ContentView.swift */; };
+		77551F6A26D3182B00F49483 /* StrategyMACD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77551F6726D3182B00F49483 /* StrategyMACD.swift */; };
+		77551F6B26D3182B00F49483 /* StrategyGoldenCross.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77551F6826D3182B00F49483 /* StrategyGoldenCross.swift */; };
+		77551F6C26D3182B00F49483 /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77551F6926D3182B00F49483 /* Root.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		77551F5326D3163A00F49483 /* rust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rust.h; sourceTree = "<group>"; };
 		77551F5426D3163A00F49483 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77551F5526D3163A00F49483 /* DragonFruitApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragonFruitApp.swift; sourceTree = "<group>"; };
-		77551F5626D3163A00F49483 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		77551F5626D3163A00F49483 /* Engine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		77551F5826D3163A00F49483 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		77551F5A26D3163A00F49483 /* librust.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = librust.a; sourceTree = "<group>"; };
 		77551F5B26D3163A00F49483 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		77551F5C26D3163A00F49483 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77551F6726D3182B00F49483 /* StrategyMACD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrategyMACD.swift; sourceTree = "<group>"; };
+		77551F6826D3182B00F49483 /* StrategyGoldenCross.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrategyGoldenCross.swift; sourceTree = "<group>"; };
+		77551F6926D3182B00F49483 /* Root.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
 		77756FE826CF8CB600D4B9E4 /* DragonFruit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonFruit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -43,13 +49,15 @@
 			isa = PBXGroup;
 			children = (
 				77551F5426D3163A00F49483 /* Assets.xcassets */,
-				77551F5B26D3163A00F49483 /* ContentView.swift */,
+				77551F5526D3163A00F49483 /* DragonFruitApp.swift */,
+				77551F5626D3163A00F49483 /* Engine.swift */,
 				77551F5226D3163A00F49483 /* include */,
 				77551F5C26D3163A00F49483 /* Info.plist */,
-				77551F5526D3163A00F49483 /* DragonFruitApp.swift */,
 				77551F5926D3163A00F49483 /* lib */,
+				77551F6426D317E100F49483 /* models */,
 				77551F5726D3163A00F49483 /* Preview Content */,
-				77551F5626D3163A00F49483 /* ViewModel.swift */,
+				77551F6626D317F300F49483 /* viewmodels */,
+				77551F6526D317E600F49483 /* views */,
 			);
 			path = swift;
 			sourceTree = "<group>";
@@ -78,11 +86,36 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
+		77551F6426D317E100F49483 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				77551F6926D3182B00F49483 /* Root.swift */,
+				77551F6826D3182B00F49483 /* StrategyGoldenCross.swift */,
+				77551F6726D3182B00F49483 /* StrategyMACD.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		77551F6526D317E600F49483 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				77551F5B26D3163A00F49483 /* ContentView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		77551F6626D317F300F49483 /* viewmodels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewmodels;
+			sourceTree = "<group>";
+		};
 		77756FDF26CF8CB600D4B9E4 = {
 			isa = PBXGroup;
 			children = (
-				77551F5126D3163A00F49483 /* swift */,
 				77756FE926CF8CB600D4B9E4 /* Products */,
+				77551F5126D3163A00F49483 /* swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -186,9 +219,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77551F5F26D3163A00F49483 /* ViewModel.swift in Sources */,
+				77551F6B26D3182B00F49483 /* StrategyGoldenCross.swift in Sources */,
+				77551F5F26D3163A00F49483 /* Engine.swift in Sources */,
+				77551F6A26D3182B00F49483 /* StrategyMACD.swift in Sources */,
 				77551F6226D3163A00F49483 /* ContentView.swift in Sources */,
 				77551F5E26D3163A00F49483 /* DragonFruitApp.swift in Sources */,
+				77551F6C26D3182B00F49483 /* Root.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
