@@ -1,14 +1,44 @@
 import Foundation
+import Combine
 
 class Engine
 {
-    init() {}
+    let root: Root
+    private var listeners: Set<AnyCancellable> = Set()
 
-    func macd(fast: Int, slow: Int, signal: Int) {
-        rust_macd(UInt(fast), UInt(slow), UInt(signal))
+    init(
+        root: Root
+    ) {
+        self.root = root
+
+        root.strategyMACD
+            .objectWillChange
+            .sink(receiveValue: { [weak self] result in
+                self?.updateMACD()
+            })
+            .store(in: &listeners)
+
+        root.strategyGoldenCross
+            .objectWillChange
+            .sink(receiveValue: { [weak self] result in
+                self?.updateGoldenCross()
+            })
+            .store(in: &listeners)
     }
 
-    func goldenCross(fast: Int, slow: Int, signal: Int) {
-        rust_golden_cross(UInt(fast), UInt(slow), UInt(signal))
+    func updateMACD() {
+        rust_macd(
+            UInt(root.strategyMACD.slowPeriod),
+            UInt(root.strategyMACD.fastPeriod),
+            UInt(root.strategyMACD.signalPeriod)
+        )
+    }
+
+    func updateGoldenCross() {
+        rust_golden_cross(
+            UInt(root.strategyGoldenCross.slowPeriod),
+            UInt(root.strategyGoldenCross.fastPeriod),
+            UInt(root.strategyGoldenCross.signalPeriod)
+        )
     }
 }
